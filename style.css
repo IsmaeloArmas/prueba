@@ -74,15 +74,12 @@ body.loading {
     justify-content: space-between;
     padding: 1rem;
     z-index: 100;
-}
-
-.navbar.hide {
-    transform: translateY(-100%);
+    overflow: hidden;
 }
 
 .navbar a {
     text-decoration: none;
-    color: var(--negro);
+    color: var(--color-primario);
     padding: .5rem;
 }
 
@@ -103,4 +100,9 @@ body.loading {
     width: 70%;
     height: auto;
     fill: #F0E3DB;
+}
+
+button {
+    width: 30vw;
+    height: auto;
 }
