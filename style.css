@@ -15,12 +15,18 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Quicksand;
     height: 100vh;
+    background-color: var(--negro);
 }
 
 body.loading {
   overflow: hidden;
+}
+
+main{
+    font-family: Oswald;
+    color: var(--color-primario);
 }
 
 .loading-page {
@@ -79,12 +85,13 @@ body.loading {
 
 .navbar a {
     text-decoration: none;
+    font-size: 4vw;
     color: var(--color-primario);
     padding: .5rem;
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(img/render\ habitación\ ppal.png) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,1)), url(img/render\ habitación\ ppal.png) center/cover;
     
     height: 100vh;
     width: 100%;
@@ -99,13 +106,58 @@ body.loading {
 #logo-hero {
     width: 70%;
     height: auto;
-    fill: #F0E3DB;
+    fill: var(--color-primario);
 }
 
 button {
-    width: 30vw;
-    height: 3vh;
+    width: 40vw;
+    height: 4vh;
     border-radius: 30px;
-    color: var(--blanco);
     background-color: transparent;
+}
+
+button a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 4vw;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.servicios h1 {
+    text-align: center;
+}
+
+.cards {
+    background-color: var(--blanco);
+    width: 90vw;
+    height: 90vh;
+}
+
+.card {
+    background-color: yellowgreen;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+footer {
+    background-color: var(--color-complemento-1);
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: var(--color-primario);
+    text-align: center;
+
 }
