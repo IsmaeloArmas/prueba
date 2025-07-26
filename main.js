@@ -1,3 +1,5 @@
+
+
 gsap.fromTo ( ".loading-page", 
     { opacity: 1 },
     {
@@ -20,3 +22,21 @@ gsap.fromTo (".logo-name",
         delay: 0.5,
     }
 );
+
+const navbar = document.querySelector('.navbar');
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            if (lastScrollY < window.scrollY) {
+                // Bajando - esconder navbar
+                navbar.classList.add('hidden');
+            } else {
+                // Subiendo - mostrar navbar
+                navbar.classList.remove('hidden');
+            }
+            
+            lastScrollY = window.scrollY;
+        });
+
+
+                                        

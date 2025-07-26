@@ -81,7 +81,13 @@ main{
     padding: 1rem;
     z-index: 100;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    top: 0;
 }
+
+ .navbar.hidden {
+            transform: translateY(-100%);
+        }
 
 .navbar a {
     text-decoration: none;
@@ -131,21 +137,41 @@ button a{
 }
 
 .servicios h1 {
+    padding: 30px;
     text-align: center;
 }
 
 .cards {
-    background-color: var(--blanco);
-    width: 90vw;
-    height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  min-height: 90vh;
+  padding: 2rem 0;
 }
 
 .card {
-    background-color: yellowgreen;
-    width: 100vw;
-    height: 100vh;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
+
+
+
+/* Cambia la URL por la imagen que quieras para cada card */
+.card1 { background-image: url('img/cards/proyecto.jpeg'); }
+.card2 { background-image: url('img/cards/proyecto3.jpeg'); }
+.card3 { background-image: url('img/cards/proyecto4.jpeg'); }
+.card4 { background-image: url('img/cards/proyecto6.jpeg'); }
+
 
 footer {
     background-color: var(--color-complemento-1);
