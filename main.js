@@ -59,7 +59,7 @@ gsap.to(btn, {
     opacity: 0,
     scrollTrigger: {
         trigger: logoHero,
-        start: "top 20%", 
+        start: "top 20%",
         end: "bottom top",
         markers: false, 
         toggleActions: "play reverse none reverse",
@@ -87,7 +87,7 @@ pinnedSections.forEach((section, index, sections) => {
             end: index === section.length?`+=${lastCard.offsetHeight/2}`:footer.offsetTop-window.innerHeight,
             pin: true,
             pinSpacing: false,
-            scrub: 1.5,
+            scrub: 2,
         },
     });
 
@@ -118,7 +118,7 @@ pinnedSections.forEach((section, index, sections) => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 10%",   // empieza cuando entra la card
+                    start: "top 20%",   // empieza cuando entra la card
                     end: "top top",     // termina cuando avanza más
                     scrub: 2,
                     markers: false,
