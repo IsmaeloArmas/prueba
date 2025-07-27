@@ -10,6 +10,7 @@
     --color-secundario: #F0E3DB;
     --color-compleemnto: #638595;
     --color-complemento-1: #1C3945;
+    --gris: #161616;
     --negro: #111111;
     --blanco: #f4f4f4;
 }
@@ -77,7 +78,7 @@ body.loading {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    z-index: 100;
+    z-index: 1000;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     top: 0;
@@ -96,7 +97,6 @@ body.loading {
 
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,0.9)), url(img/render\ habitación\ ppal.png) center/cover;
-    
     height: 100vh;
     width: 100%;
     display: flex;
@@ -136,6 +136,10 @@ img {
 section {
     width: 100vw;
     height: 100vh;
+    position: relative;
+    background-color: var(--gris);
+    color: var(--blanco);
+    overflow: hidden;
 }
 
 .card.scroll {
@@ -166,7 +170,85 @@ section {
   transform: translateY(50%);
 }
 
+h1 {
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 4rem;
+    font-weight: 450;
+    line-height: 1.2;
+}
 
+.outro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.spotlight {
+    background-color: var(--negro);
+}
+
+.spotlight-images {
+    position: absolute;
+    top: 0;
+    left: -25vw;
+    width: 200vw;
+    height: 300svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(5%);
+    will-change: transform;
+}
+
+.row {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.SLimg {
+    flex: 1;
+    aspect-ratio: 5/7;
+    overflow: hidden;
+}
+
+.SLimg img {
+    opacity: 0.5;
+    filter: saturate(0);
+}
+
+.mask-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    -webkit-mask: url(SVG/arquiestudio\ logo\ vector.svg) center/contain no-repeat;
+    mask: url(SVG/arquiestudio\ logo\ vector.svg) center/contain no-repeat;
+    -webkit-mask-size: 0%;
+    mask-size: 0%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.mask-container .mask-img{
+    width: 100%;
+    height: 100%;
+}
 
 footer {
     background-color: var(--negro);
@@ -175,6 +257,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: auto;
 }
 
 footer p {
